@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		279E13B41819731100CCDE90 /* MNDPodcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E13B31819731100CCDE90 /* MNDPodcastCell.m */; };
 		27D4A32418191AE1008DF7BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D4A32318191AE1008DF7BF /* Foundation.framework */; };
 		27D4A32618191AE1008DF7BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D4A32518191AE1008DF7BF /* CoreGraphics.framework */; };
 		27D4A32818191AE1008DF7BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D4A32718191AE1008DF7BF /* UIKit.framework */; };
@@ -14,13 +15,17 @@
 		27D4A33018191AE1008DF7BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A32F18191AE1008DF7BF /* main.m */; };
 		27D4A33418191AE1008DF7BF /* MNDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A33318191AE1008DF7BF /* MNDAppDelegate.m */; };
 		27D4A33718191AE1008DF7BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D4A33518191AE1008DF7BF /* Main.storyboard */; };
-		27D4A33A18191AE1008DF7BF /* MNDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A33918191AE1008DF7BF /* MNDViewController.m */; };
 		27D4A33C18191AE1008DF7BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D4A33B18191AE1008DF7BF /* Images.xcassets */; };
 		27D4A34318191AE1008DF7BF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D4A34218191AE1008DF7BF /* XCTest.framework */; };
 		27D4A34418191AE1008DF7BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D4A32318191AE1008DF7BF /* Foundation.framework */; };
 		27D4A34518191AE1008DF7BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D4A32718191AE1008DF7BF /* UIKit.framework */; };
 		27D4A34D18191AE1008DF7BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27D4A34B18191AE1008DF7BF /* InfoPlist.strings */; };
 		27D4A34F18191AE1008DF7BF /* PodcastsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A34E18191AE1008DF7BF /* PodcastsTests.m */; };
+		27D4A35A18191B21008DF7BF /* MNDPodcastListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A35918191B21008DF7BF /* MNDPodcastListViewController.m */; };
+		27D4A35D18191B3F008DF7BF /* MNDDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A35C18191B3F008DF7BF /* MNDDataModel.m */; };
+		27D4A36018191B52008DF7BF /* Podcasts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A35E18191B52008DF7BF /* Podcasts.xcdatamodeld */; };
+		27D4A3661819416A008DF7BF /* MNDPodcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A3651819416A008DF7BF /* MNDPodcast.m */; };
+		27D4A36918194593008DF7BF /* MNDPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4A36818194593008DF7BF /* MNDPlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		279E13B21819731100CCDE90 /* MNDPodcastCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDPodcastCell.h; sourceTree = "<group>"; };
+		279E13B31819731100CCDE90 /* MNDPodcastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNDPodcastCell.m; sourceTree = "<group>"; };
 		27D4A32018191AE1008DF7BF /* Podcasts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podcasts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D4A32318191AE1008DF7BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27D4A32518191AE1008DF7BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +52,21 @@
 		27D4A33218191AE1008DF7BF /* MNDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNDAppDelegate.h; sourceTree = "<group>"; };
 		27D4A33318191AE1008DF7BF /* MNDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNDAppDelegate.m; sourceTree = "<group>"; };
 		27D4A33618191AE1008DF7BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		27D4A33818191AE1008DF7BF /* MNDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNDViewController.h; sourceTree = "<group>"; };
-		27D4A33918191AE1008DF7BF /* MNDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNDViewController.m; sourceTree = "<group>"; };
 		27D4A33B18191AE1008DF7BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27D4A34118191AE1008DF7BF /* PodcastsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodcastsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D4A34218191AE1008DF7BF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		27D4A34A18191AE1008DF7BF /* PodcastsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PodcastsTests-Info.plist"; sourceTree = "<group>"; };
 		27D4A34C18191AE1008DF7BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27D4A34E18191AE1008DF7BF /* PodcastsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PodcastsTests.m; sourceTree = "<group>"; };
+		27D4A35818191B21008DF7BF /* MNDPodcastListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDPodcastListViewController.h; sourceTree = "<group>"; };
+		27D4A35918191B21008DF7BF /* MNDPodcastListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNDPodcastListViewController.m; sourceTree = "<group>"; };
+		27D4A35B18191B3F008DF7BF /* MNDDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDDataModel.h; sourceTree = "<group>"; };
+		27D4A35C18191B3F008DF7BF /* MNDDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNDDataModel.m; sourceTree = "<group>"; };
+		27D4A35F18191B52008DF7BF /* Podcasts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Podcasts.xcdatamodel; sourceTree = "<group>"; };
+		27D4A3641819416A008DF7BF /* MNDPodcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDPodcast.h; sourceTree = "<group>"; };
+		27D4A3651819416A008DF7BF /* MNDPodcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNDPodcast.m; sourceTree = "<group>"; };
+		27D4A36718194593008DF7BF /* MNDPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDPlayerViewController.h; sourceTree = "<group>"; };
+		27D4A36818194593008DF7BF /* MNDPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNDPlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +129,19 @@
 				27D4A33218191AE1008DF7BF /* MNDAppDelegate.h */,
 				27D4A33318191AE1008DF7BF /* MNDAppDelegate.m */,
 				27D4A33518191AE1008DF7BF /* Main.storyboard */,
-				27D4A33818191AE1008DF7BF /* MNDViewController.h */,
-				27D4A33918191AE1008DF7BF /* MNDViewController.m */,
 				27D4A33B18191AE1008DF7BF /* Images.xcassets */,
 				27D4A32A18191AE1008DF7BF /* Supporting Files */,
+				27D4A35818191B21008DF7BF /* MNDPodcastListViewController.h */,
+				27D4A35918191B21008DF7BF /* MNDPodcastListViewController.m */,
+				27D4A35B18191B3F008DF7BF /* MNDDataModel.h */,
+				27D4A35C18191B3F008DF7BF /* MNDDataModel.m */,
+				27D4A3641819416A008DF7BF /* MNDPodcast.h */,
+				27D4A3651819416A008DF7BF /* MNDPodcast.m */,
+				27D4A35E18191B52008DF7BF /* Podcasts.xcdatamodeld */,
+				27D4A36718194593008DF7BF /* MNDPlayerViewController.h */,
+				27D4A36818194593008DF7BF /* MNDPlayerViewController.m */,
+				279E13B21819731100CCDE90 /* MNDPodcastCell.h */,
+				279E13B31819731100CCDE90 /* MNDPodcastCell.m */,
 			);
 			path = Podcasts;
 			sourceTree = "<group>";
@@ -200,6 +223,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = monoid;
 				TargetAttributes = {
+					27D4A31F18191AE1008DF7BF = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					27D4A34018191AE1008DF7BF = {
 						TestTargetID = 27D4A31F18191AE1008DF7BF;
 					};
@@ -250,9 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279E13B41819731100CCDE90 /* MNDPodcastCell.m in Sources */,
+				27D4A35A18191B21008DF7BF /* MNDPodcastListViewController.m in Sources */,
 				27D4A33418191AE1008DF7BF /* MNDAppDelegate.m in Sources */,
+				27D4A3661819416A008DF7BF /* MNDPodcast.m in Sources */,
+				27D4A36018191B52008DF7BF /* Podcasts.xcdatamodeld in Sources */,
 				27D4A33018191AE1008DF7BF /* main.m in Sources */,
-				27D4A33A18191AE1008DF7BF /* MNDViewController.m in Sources */,
+				27D4A36918194593008DF7BF /* MNDPlayerViewController.m in Sources */,
+				27D4A35D18191B3F008DF7BF /* MNDDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +496,7 @@
 				27D4A35418191AE1008DF7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27D4A35518191AE1008DF7BF /* Build configuration list for PBXNativeTarget "PodcastsTests" */ = {
 			isa = XCConfigurationList;
@@ -469,8 +505,22 @@
 				27D4A35718191AE1008DF7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27D4A35E18191B52008DF7BF /* Podcasts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27D4A35F18191B52008DF7BF /* Podcasts.xcdatamodel */,
+			);
+			currentVersion = 27D4A35F18191B52008DF7BF /* Podcasts.xcdatamodel */;
+			path = Podcasts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 27D4A31818191AE1008DF7BF /* Project object */;
 }

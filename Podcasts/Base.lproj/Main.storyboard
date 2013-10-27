@@ -1,23 +1,152 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4511" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ca2-4E-HFS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Podcast List View Controller - Podcasts-->
+        <scene sceneID="6Nw-xt-Z9U">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MNDViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <tableViewController id="aPY-bD-kCn" customClass="MNDPodcastListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" id="qPI-cC-Vda">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PodcastCell" rowHeight="76" id="HDQ-SW-c2K" customClass="MNDPodcastCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="76"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HDQ-SW-c2K" id="8K8-gb-fED">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jC-cg-lOY">
+                                            <rect key="frame" x="20" y="15" width="228" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byf-5h-wwd">
+                                            <rect key="frame" x="256" y="16" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="CkD-sd-yml"/>
+                                            </constraints>
+                                            <state key="normal" image="811-download-box">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="downloadTapped:" destination="aPY-bD-kCn" eventType="touchUpInside" id="ppt-y3-wMz"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeF-Rh-6ra">
+                                            <rect key="frame" x="20" y="44" width="228" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="uSU-oY-FYi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="byf-5h-wwd" firstAttribute="leading" secondItem="6jC-cg-lOY" secondAttribute="trailing" constant="8" symbolic="YES" id="87u-Cg-bNH"/>
+                                        <constraint firstAttribute="trailing" secondItem="byf-5h-wwd" secondAttribute="trailing" constant="20" symbolic="YES" id="8Jy-xy-Vbr"/>
+                                        <constraint firstItem="6jC-cg-lOY" firstAttribute="top" secondItem="8K8-gb-fED" secondAttribute="top" constant="15" id="9c4-et-7V2"/>
+                                        <constraint firstItem="XeF-Rh-6ra" firstAttribute="leading" secondItem="6jC-cg-lOY" secondAttribute="leading" id="CIF-HB-Zlu"/>
+                                        <constraint firstItem="byf-5h-wwd" firstAttribute="top" secondItem="8K8-gb-fED" secondAttribute="top" constant="16" id="atf-w8-WcV"/>
+                                        <constraint firstItem="XeF-Rh-6ra" firstAttribute="top" secondItem="6jC-cg-lOY" secondAttribute="bottom" constant="8" symbolic="YES" id="dUC-1q-E9Q"/>
+                                        <constraint firstItem="6jC-cg-lOY" firstAttribute="leading" secondItem="8K8-gb-fED" secondAttribute="leading" constant="20" symbolic="YES" id="fJO-zg-Cpb"/>
+                                        <constraint firstItem="byf-5h-wwd" firstAttribute="leading" secondItem="XeF-Rh-6ra" secondAttribute="trailing" constant="8" symbolic="YES" id="iQy-5S-lXP"/>
+                                        <constraint firstAttribute="centerY" secondItem="byf-5h-wwd" secondAttribute="centerY" id="nAR-HA-ZcM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="downloadButton" destination="byf-5h-wwd" id="hqA-at-dro"/>
+                                    <outlet property="subtitleLabel" destination="XeF-Rh-6ra" id="WaG-1s-Lfz"/>
+                                    <outlet property="titleLabel" destination="6jC-cg-lOY" id="6GB-5F-VbG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aPY-bD-kCn" id="idI-kX-ekA"/>
+                            <outlet property="delegate" destination="aPY-bD-kCn" id="vrk-xT-Qne"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Podcasts" id="hVp-99-vWM">
+                        <barButtonItem key="leftBarButtonItem" title="Delete All" id="IGj-S4-QUu">
+                            <connections>
+                                <action selector="deleteAllTapped:" destination="aPY-bD-kCn" id="DmQ-3n-3pj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Create Seed" id="DH2-Pp-K7M">
+                            <connections>
+                                <action selector="createSeedTapped:" destination="aPY-bD-kCn" id="Fxp-4b-ChH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="zoF-To-W53" kind="push" identifier="PlayPodcast" id="98d-UO-Hx7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5l-pk-CMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="85"/>
+        </scene>
+        <!--Player View Controller - Podcast-->
+        <scene sceneID="UaF-PM-TO7">
+            <objects>
+                <viewController id="zoF-To-W53" customClass="MNDPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YLq-NP-D7l"/>
+                        <viewControllerLayoutGuide type="bottom" id="JUM-BN-E3W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="58N-qj-p7s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky8-xB-Ka7">
+                                <rect key="frame" x="145" y="269" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="zoF-To-W53" eventType="touchUpInside" id="sO0-Pc-NiP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Podcast" id="Zs8-XH-L9G"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0P-xM-KkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="877" y="85"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tfV-Eb-tJY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ca2-4E-HFS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DAz-F8-eHG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aPY-bD-kCn" kind="relationship" relationship="rootViewController" id="yly-Oy-9MG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ay-0W-7Jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="85"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="811-download-box" width="22" height="28"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
